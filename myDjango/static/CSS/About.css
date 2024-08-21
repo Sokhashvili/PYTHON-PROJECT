@@ -1,0 +1,121 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2b2b2b;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    width: 100%;
+    background-color: #3b3b3b;
+    padding: 15px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: fixed;
+}
+.Header1{
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    color: black;
+}
+.TABLE1{
+    display: flex;
+    gap: 50px;
+    margin-right: 250px;
+    padding-left: 10px;
+}
+.Drive{
+    display: flex;
+    margin-left: 50px;
+    color: white;
+    width: 100px;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.logo {
+    font-size: 4px;
+    margin-right: 50px;
+    color: #ff5f5f;
+    padding-right: 20px;
+}
+.LUXY{
+    width: 150px;
+}
+.Section1{
+    margin-top:150px;
+}
+
+.link1{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    color: white;
+    font-size: 15px;
+    margin-top: 30px;
+}
+.link1:hover {
+    color: #ff5f5f;
+}
+
+
+.icon{
+    position: absolute;
+    right: 70px;
+    margin-top: 30px;
+    transform: scale(1.4);
+    gap: 10px;
+    display: flex;
+    color: white;
+    width: 40px;
+}
+
+
+
+.FA{
+    color:white ;
+}
+.IN {
+ color: white;
+}
+.container{
+    color: white;
+    height: 500px;
+    display: flex;
+    padding: 20px; }
+
+.IMG{
+width: 450px;
+margin-left: 350px;
+margin-top: 50px;
+object-fit: contain;
+
+
+  }
+.h1s{
+    margin-left:150px;
+    font-size: 50px;
+    color: white;
+}
+.text1{
+    margin-left: 150px;
+    width: 350px;
+    font-size: 17px; }
+.space{
+        display:flex;
+        height: 200px;
+ }
+
+.footer1{
+    height: 100px;
+    display: flex;
+    text-align: center;
+}
+.FT{
+margin-left: 120px;
+    color: white;
+}
+.wi{
+    color: white;
+}

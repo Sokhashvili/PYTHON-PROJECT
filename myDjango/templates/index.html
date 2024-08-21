@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUXY RENTAL</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="Header1">
+                <div class="logo"> 
+                    <p class="Drive">
+                        <b>
+                            <a class="Drive" style="text-decoration: none;" href="./index.html">
+                                <img class="LUXY" src="image/Capture_sdsdsd-removebg-preview.png" alt="LUXY RENT">
+                            </a>
+                        </b>
+                    </p>
+                </div>
+                <div class="TABLE1">
+                    <a class="link1" style="text-decoration: none;" href="/About.html">About</a>
+                    <a class="link1" style="text-decoration: none;" href="/Sport.html">Cars</a>
+                    <a class="link1" style="text-decoration: none;" href="/Contact.html">Contact</a>
+                    <a class="link1" style="text-decoration: none;" href="/MyPage.html">My Page</a>
+                    <a class="link1" style="text-decoration: none;" href="/Basket/basket.html">
+                        <i class="fa-solid fa-shopping-cart"></i>
+                    </a>
+                </div>
+                <div class="icon">
+                    <a class="FA" target="_blank" href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                    <a class="IN" target="_blank" href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="section1">
+        <div class="registration-form">
+            <h2>Register Now</h2>
+            <form id="registration-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit" class="btn-register">Register</button>
+            </form>
+        </div>
+        <div class="text">
+            <h1>LUXY RENTAL</h1>
+        </div>
+    </section>
+
+    <footer class="footer1">
+        <p class="FT">© 2025 by Levan Sokhashvili. Powered and secured by LUXY RENTAL</p>
+    </footer>
+
+    <script>
+        document.getElementById('registration-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            localStorage.setItem('username', name);
+            window.location.href = './MyPage.html';
+        });
+    </script>
+</body>
+</html>

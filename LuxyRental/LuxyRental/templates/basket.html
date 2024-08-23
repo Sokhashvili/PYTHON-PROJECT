@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Basket</title>
+    <link rel="stylesheet" href="./basket.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="Header1">
+                <div class="logo"> 
+                    <p class="Drive"><B><a class="Drive" style="text-decoration: none;" href="/index.html"> <img class="LUXY" src="/image/Capture_sdsdsd-removebg-preview.png" alt="LUXY RENT"></a></B></p>
+                </div>
+                <div class="TABLE1">
+                    <a class="link1" style="text-decoration: none;" href="/About.html">About</a>
+                    <a class="link1" style="text-decoration: none;" href="/Sport.html">Cars</a>
+                    <a class="link1" style="text-decoration: none;" href="/Contact.html">Contact</a>
+                    <a class="link1" style="text-decoration: none;" href="/MyPage.html">My Page</a>
+                    <a class="link1" style="text-decoration: none;" href="/Basket/basket.html">
+                        <i class="fa-solid fa-shopping-cart"></i>
+                    </a>
+                </div>
+                <div class="icon">
+                    <a class="FA" target="_blank" href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                    <a class="IN" target="_blank" href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <h1>Your Basket</h1>
+    <div id="basket-container"></div>
+
+    <script>
+        const basket = JSON.parse(localStorage.getItem('basket')) || [];
+
+        const basketContainer = document.getElementById('basket-container');
+
+        function renderBasket() {
+            basketContainer.innerHTML = '';
+
+            basket.forEach((item, index) => {
+                const cardDiv = document.createElement('div');
+                cardDiv.className = 'basket-item';
+
+                cardDiv.innerHTML = `
+                    <img src="${item.image}" alt="${item.title}" class="basket-image">
+                    <h2>${item.title}</h2>
+                    <p>${item.price}</p>
+                    <div class="basket-buttons">
+                        <button onclick="removeFromBasket(${index})">Remove</button>
+                        <a href="${item.learnMoreLink}" class="learn-more-btn"> Learn more</a>
+                    </div>
+                `;
+
+                basketContainer.appendChild(cardDiv);
+            });
+        }
+
+        function removeFromBasket(index) {
+            basket.splice(index, 1);
+            localStorage.setItem('basket', JSON.stringify(basket));
+            renderBasket();
+        }
+
+        renderBasket();
+    </script>
+    <script src="./basket.js"></script>
+</body>
+</html>

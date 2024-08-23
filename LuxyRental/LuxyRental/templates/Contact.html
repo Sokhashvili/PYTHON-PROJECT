@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="{% static 'CSS/Contact.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="Header1">
+                <div class="logo"> 
+                    <p class="Drive">
+                        <b><a class="Drive" style="text-decoration: none;" href="{% url 'index' %}">
+                            <img class="LUXY" src="{% static 'image/Capture_sdsdsd-removebg-preview.png' %}" alt="LUXY RENT">
+                        </a></b>
+                    </p>
+                </div>
+
+                <div class="TABLE1">
+                    <a class="link1" style="text-decoration: none;" href="{% url 'about' %}">About</a>
+                    <a class="link1" style="text-decoration: none;" href="{% url 'cars' %}">Cars</a>
+                    <a class="link1" style="text-decoration: none;" href="{% url 'contact' %}">Contact</a>
+                    <a class="link1" style="text-decoration: none;" href="{% url 'my_page' %}">My Page</a>
+                    <a class="link1" style="text-decoration: none;" href="{% url 'basket' %}">
+                        <i class="fa-solid fa-shopping-cart"></i>
+                    </a>
+                </div>
+
+                <div class="icon">
+                    <a class="FA" target="_blank" href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                    <a class="IN" target="_blank" href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="section">
+        <div class="Container"> 
+            <h1 class="Contacts">Contacts</h1> 
+            <p class="Contacts1">
+                LUXY RENTAL Is Represented <br>
+                by World of Cars <br><br><br>
+                Email: LUXYRENTAL@Mysite.com <br>
+                Phone: 123-456-7890
+            </p>
+        </div>
+    
+        <div class="container2"> 
+            <form>
+                <div class="input"> 
+                    <label for="Fname">First Name</label><br>
+                    <input required id="Fname" name="Fname"><br>
+                </div>
+                <div class="input"> 
+                    <label for="Lname">Last Name</label><br>
+                    <input required id="Lname" name="Lname"><br>
+                </div>
+                <div class="input"> 
+                    <label for="Email">Email</label><br>
+                    <input required id="Email" name="Email"><br>
+                </div>
+                <div class="input"> 
+                    <label for="Subject">Subject</label><br>
+                    <input required id="Subject" name="Subject"><br>
+                </div>
+                <div class="input3"> 
+                    <textarea placeholder="Leave us a message..." name="message" id="message" cols="30" rows="10"></textarea><br>
+                    <button type="submit" class="button1">SUBMIT</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer1">
+        <div class="footer-content">
+            <p class="FT">
+                © 2035 by Charley Knox. Powered and secured by <a class="wi" target="_blank" style="text-decoration: none;" href="https://www.wix.com/">Wix</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
